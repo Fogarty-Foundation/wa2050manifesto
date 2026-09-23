@@ -198,6 +198,11 @@
   }
   .foot-logos img { height: 52px; width: auto; display: block; }
   @media (max-width: 420px) { .foot-logos { gap: 24px; } .foot-logos img { height: 42px; } }
+  /* When the logos stack (narrow screens), show UWA above Fogarty Foundation */
+  @media (max-width: 767px) {
+    .foot-logos { flex-direction: column; }
+    .foot-logos img[alt^="The University"] { order: -1; }
+  }
 
   .g-hero { padding: 58px 0 34px; text-align: center; }
   .g-hero .eyebrow { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--torch); font-weight: 700; margin-bottom: 12px; }
